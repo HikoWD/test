@@ -28,6 +28,7 @@ public class SearchAccessoriesTest {
 
         ShirtPage shirtPage = searchPage.shirtClick();
 
+        //shirtPage.deleteSpam();
         shirtPage.openListSize();
         shirtPage.choseSize();
         shirtPage.addToBasket();

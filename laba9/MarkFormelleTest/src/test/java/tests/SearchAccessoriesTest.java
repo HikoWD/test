@@ -2,7 +2,6 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.MainPage;
@@ -17,13 +16,11 @@ public class SearchAccessoriesTest {
     }
 
     @Test
-    public void isNewPateCreated() {
+    public void isNewPageCreated() throws InterruptedException {
         mainPage = new MainPage(driver);
         mainPage.openPage();
-        //mainPage.searchClick();
-        mainPage.scrollTo();
-//        mainPage.enterSearchText("iPhone Accessories");
-//        mainPage.enterAccessory();
+        mainPage.scrollToFooter();
+        mainPage.scrollToContactsAndClick();
     }
 
 //    @AfterMethod(alwaysRun = true)

@@ -29,7 +29,7 @@ public class MainPage {
     }
 
     public void scrollToFooter() throws InterruptedException {
-        Thread.sleep(200);
+        Thread.sleep(2000);
         Actions actions = new Actions(driver);
         actions.scrollToElement(footer);
         actions.perform();

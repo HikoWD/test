@@ -11,6 +11,11 @@ import javax.swing.*;
 public class ShirtPage {
     WebDriver driver;
 
+    @FindBy(xpath = "//div[@class='popmechanic-close']")
+    private WebElement spam;
+    @FindBy(xpath = "//a[text()='Да, все верно']")
+    private WebElement spam22;
+
     @FindBy(xpath = "//div[@class='size-header closed']")
     private WebElement ListSize;
 
@@ -28,9 +33,25 @@ public class ShirtPage {
         PageFactory.initElements(driver, this);
     }
 
+    public void deleteSpam22() throws InterruptedException {
+        Thread.sleep(15000);
+        Actions actions = new Actions(driver);
+        actions.scrollByAmount(0, 50);
+        actions.perform();
+        Thread.sleep(30000);
+        spam.click();
+    }
+
+    public void deleteSpam() throws InterruptedException {
+        Actions actions = new Actions(driver);
+        actions.scrollByAmount(0, 50);
+        actions.perform();
+        Thread.sleep(30000);
+        spam.click();
+    }
+
     public void openListSize() throws InterruptedException {
         Thread.sleep(200);
-
         ListSize.click();
     }
 
@@ -44,7 +65,7 @@ public class ShirtPage {
     }
 
     public void addToBasket() throws InterruptedException {
-        Thread.sleep(200);
+        Thread.sleep(2000);
         basket.click();
     }
 

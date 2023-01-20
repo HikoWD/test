@@ -1,14 +1,10 @@
-import Planes.experimentalPlane;
+import Planes.ExperimentalPlane;
 import models.MilitaryType;
 import Planes.MilitaryPlane;
 import Planes.PassengerPlane;
 import Planes.Plane;
 
 import java.util.*;
-
-// version: 1.1
-// made by Vitali Shulha
-// 4-Jan-2019
 
 public class Airport {
     private List<? extends Plane> planes;
@@ -68,14 +64,14 @@ public class Airport {
         return bomberMilitaryPlanes;
     }
 
-    public List<experimentalPlane> getExperimentalPlanes() {
-        List<experimentalPlane> experimentalPlanes = new ArrayList<>();
+    public List<ExperimentalPlane> getExperimentalPlanes() {
+        List<ExperimentalPlane> ExperimentalPlanes = new ArrayList<>();
         for (Plane plane : planes) {
-            if (plane instanceof experimentalPlane) {
-                experimentalPlanes.add((experimentalPlane) plane);
+            if (plane instanceof ExperimentalPlane) {
+                ExperimentalPlanes.add((ExperimentalPlane) plane);
             }
         }
-        return experimentalPlanes;
+        return ExperimentalPlanes;
     }
 
     public Airport sortByMaxDistance() {
